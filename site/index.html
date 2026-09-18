@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albany Cub Scouts Pack 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">
+                    <div class="logo-icon"><img src="images/pack3-tent.png" alt="Pack 3 tent badge"></div>
+                    <div class="logo-text">
+                        <div class="main">Pack 3</div>
+                        <div class="sub">Albany, California</div>
+                    </div>
+                </a>
+                <nav class="nav-desktop">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#organization">Organization</a>
+                    <a href="#activities">Activities</a>
+                    <a href="#join">Join</a>
+                    <a href="#faqs">FAQs</a>
+                    <a href="#calendar">Calendar</a>
+                    <a href="https://docs.google.com/a/albanycubscouts.org/forms/d/e/1FAIpQLSfxPHOYqI9R7ilFIaBDBQiry88zzTRD1cMc6Qc4IZDQA5xPcA/viewform" target="_blank" rel="noopener">Contact</a>
+                </nav>
+                <a href="#join" class="btn btn-primary" style="display: none;">Join Pack 3</a>
+                <button class="mobile-menu-btn" onclick="toggleMenu()">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="overlay" onclick="toggleMenu()"></div>
+    <div class="mobile-menu">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#organization" onclick="toggleMenu()">Organization</a>
+        <a href="#activities" onclick="toggleMenu()">Activities</a>
+        <a href="#faqs" onclick="toggleMenu()">FAQs</a>
+        <a href="#calendar" onclick="toggleMenu()">Calendar</a>
+        <a href="https://docs.google.com/a/albanycubscouts.org/forms/d/e/1FAIpQLSfxPHOYqI9R7ilFIaBDBQiry88zzTRD1cMc6Qc4IZDQA5xPcA/viewform" target="_blank" rel="noopener" onclick="toggleMenu()">Contact</a>
+        <a href="#join" class="btn btn-primary" onclick="toggleMenu()">Join Pack 3</a>
+    </div>
+
+    <!-- ============================================================
+         Pseudo-page: HOME
+         Single-file site. The Join and Calendar "pages" are sibling
+         .page sections toggled with CSS :target (see styles.css).
+         ============================================================ -->
+    <div id="home" class="page page-home">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <div>
+                        <span class="badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Registration Always Open
+                        </span>
+                        <h1>Cub Scouts Pack 3 Albany, CA</h1>
+                        <p class="hero-subtitle">Are you ready for more s'mores, skits, badges, and outdoor fun?</p>
+                        <p class="hero-text">Albany Pack 3 is back in action for 2026-2027! We're an inclusive pack welcoming all kids in Kindergarten through Fifth Grade.</p>
+                        <div class="event-card" id="event-card">
+                            <h3 id="event-title">Loading…</h3>
+                            <div class="event-item" id="event-date" style="display: none;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                <span></span>
+                            </div>
+                            <div class="event-item" id="event-time" style="display: none;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span></span>
+                            </div>
+                            <div class="event-item" id="event-location" style="display: none;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#join" class="btn btn-primary btn-large">Join Pack 3</a>
+                            <a href="#about" class="btn btn-outline btn-large">About Cub Scouts</a>
+                        </div>
+                    </div>
+                    <div class="hero-logo">
+                        <img src="images/pack3-logo.png" alt="Albany Cub Scouts Pack 3 Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links">
+        <a href="#join" class="quick-link-card orange">
+            <div class="quick-link-bg" style="background-image: url('images/card-registration-3.jpg');"></div>
+            <div class="quick-link-overlay"></div>
+            <div class="quick-link-content">
+                <!-- <div class="quick-link-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                </div> -->
+                <h3>Registration</h3>
+                <p>Learn about membership fees and how to join.</p>
+                <span class="quick-link-arrow">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
+        </a>
+        <a href="#activities" class="quick-link-card gold">
+            <div class="quick-link-bg" style="background-image: url('images/card-activities-2.jpg');"></div>
+            <div class="quick-link-overlay"></div>
+            <div class="quick-link-content">
+                <!-- <div class="quick-link-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div> -->
+                <h3>Activities</h3>
+                <p>Explore our events, campouts, and adventures.</p>
+                <span class="quick-link-arrow">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
+        </a>
+        <a href="#faqs" class="quick-link-card bark">
+            <div class="quick-link-bg" style="background-image: url('images/card-faqs-3.jpg');"></div>
+            <div class="quick-link-overlay"></div>
+            <div class="quick-link-content">
+                <!-- <div class="quick-link-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div> -->
+                <h3>Scouting FAQs</h3>
+                <p>Common questions about Cub Scouts answered.</p>
+                <span class="quick-link-arrow">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
+        </a>
+    </section>
+
+    <!-- Welcome -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="welcome-grid">
+                <div class="welcome-text">
+                    <span class="section-label">Welcome to Albany Cub Scouts Pack 3</span>
+                    <h2>Are you ready for more <span style="color: var(--forest)">s'mores, skits, badges, and outdoor fun?</span></h2>
+                    <p>Albany Cub Scouts are kids in kindergarten through fifth grade who join a pack to go hiking, play games, learn skills, make friends, and much, much more.</p>
+                    <p><strong>Cub Scouting means "doing".</strong> You have lots to do as a Cub Scout—hiking, camping, crafts, games, sports, songs, stories, and puzzles, to name just a few things. Much of the fun happens right in the den and pack.</p>
+                    <p>Scouts also participate in events like the annual Blue and Gold banquet, the Pinewood Derby, an Egg Drop, and our Pancake Breakfast. Whatever it is that you enjoy, you'll have a chance to do it in Cub Scouting!</p>
+                    <div class="highlight-box">
+                        <p>"Albany Pack 3 has a long and proud history of service to Albany's youth and to the community as a whole."</p>
+                    </div>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+                            <div><h4>Character</h4><p>Building strong moral values</p></div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
+                            <div><h4>Citizenship</h4><p>Community responsibility</p></div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                            <div><h4>Fitness</h4><p>Healthy active lifestyles</p></div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                            <div><h4>Leadership</h4><p>Developing future leaders</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="welcome-image">
+                    <img src="images/welcome-group-4.jpg" alt="Pack 3 families at community event">
+                    <div class="floating-card bottom-left">
+                        <div class="floating-card-content">
+                            <div class="floating-card-icon orange">K-5</div>
+                            <div class="floating-card-text"><h4>All Welcome</h4><p>Kindergarten to 5th Grade</p></div>
+                        </div>
+                    </div>
+                    <div class="floating-card top-right">
+                        <div class="floating-card-content">
+                            <div class="floating-card-icon green"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+                            <div class="floating-card-text"><h4>Inclusive Unit</h4><p>Scouts for Equality</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organization -->
+    <section id="organization" class="section organization">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How We're Organized</span>
+                <h2 class="section-title">Pack <span>Organization</span></h2>
+                <p class="section-subtitle">Albany Cub Scouts Pack 3 is made up of dens organized by age group. Different grade levels work toward achieving the rank for that year.</p>
+            </div>
+            <div class="dens-grid">
+                <a class="den-card" href="https://www.scouting.org/programs/cub-scouts/adventures/lion/" target="_blank" rel="noopener">
+                    <div class="den-icon has-badge" ><img src="images/rank-lion.png" alt="Lion rank badge"></div>
+                    <h3>Lion</h3>
+                    <div class="den-grade">Kindergarten</div>
+                    <p>Our youngest scouts start their adventure with fun activities and family involvement!</p>
+                </a>
+                <a class="den-card" href="https://www.scouting.org/programs/cub-scouts/adventures/tiger/" target="_blank" rel="noopener">
+                    <div class="den-icon has-badge" ><img src="images/rank-tiger.png" alt="Tiger rank badge"></div>
+                    <h3>Tiger</h3>
+                    <div class="den-grade">1st Grade</div>
+                    <p>Building confidence and new skills while exploring the world around them.</p>
+                </a>
+                <a class="den-card" href="https://www.scouting.org/programs/cub-scouts/adventures/wolf/" target="_blank" rel="noopener">
+                    <div class="den-icon has-badge" ><img src="images/rank-wolf.png" alt="Wolf rank badge"></div>
+                    <h3>Wolf</h3>
+                    <div class="den-grade">2nd Grade</div>
+                    <p>Exploring the outdoors and learning about our community together.</p>
+                </a>
+                <a class="den-card" href="https://www.scouting.org/programs/cub-scouts/adventures/bear/" target="_blank" rel="noopener">
+                    <div class="den-icon has-badge" ><img src="images/rank-bear.png" alt="Bear rank badge"></div>
+                    <h3>Bear</h3>
+                    <div class="den-grade">3rd Grade</div>
+                    <p>Taking on bigger challenges and developing teamwork skills.</p>
+                </a>
+                <a class="den-card" href="https://www.scouting.org/programs/cub-scouts/adventures/webelos/" target="_blank" rel="noopener">
+                    <div class="den-icon has-badge" ><img src="images/rank-webelos.png" alt="Webelos rank badge"></div>
+                    <h3>Webelos</h3>
+                    <div class="den-grade">4th Grade</div>
+                    <p>We Be Loyal Scouts - preparing for the next step in their journey.</p>
+                </a>
+                <a class="den-card" href="https://www.scouting.org/programs/cub-scouts/adventures/arrow-of-light/" target="_blank" rel="noopener">
+                    <div class="den-icon has-badge" ><img src="images/rank-aol.png" alt="Arrow of Light rank badge"></div>
+                    <h3>Arrow of Light</h3>
+                    <div class="den-grade">5th Grade</div>
+                    <p>The highest rank in Cub Scouting before bridging to Scouts BSA.</p>
+                </a>
+            </div>
+            <p style="font-size: 12px; color: var(--text-medium); text-align: center; margin-top: 16px; opacity: 0.75;">Cub Scout rank badges are trademarks of Scouting America, used with permission.</p>
+            <div class="meeting-info">
+                <div class="meeting-grid">
+                    <div class="meeting-block">
+                        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Pack Meetings</h3>
+                        <p>The whole Pack (all dens) meets once a month on Thursdays at the Veterans Memorial Building, usually from 6:30 to 8pm. The entire family (including siblings) is welcome.</p>
+                        <div class="meeting-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Veterans Memorial Hall, 1325 Portland Avenue, Albany, CA</div>
+                    </div>
+                    <div class="meeting-block">
+                        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Den Meetings</h3>
+                        <p>Each den establishes its own meeting schedule, usually 1-2 times per month. At den meetings, Scouts work on advancements, learn skills, and always have a great time.</p>
+                        <p style="font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 8px;">For Lion and Tiger Scouts, a parent is expected to join their Scout at meetings.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="charter-info">Pack 3 is in the Herms District of the Golden Gate Council and is chartered by the <span>American Legion Post 292 of Albany</span></p>
+        </div>
+    </section>
+
+    <!-- Activities -->
+    <section id="activities" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Pack 3 Activities</span>
+                <h2 class="section-title">What's it like to be in <span>Pack 3?</span></h2>
+                <p class="section-subtitle">Check out some of our annual activities. From outdoor adventures to community service, there's always something exciting happening!</p>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="images/activity-derby-2.jpg" alt="Pinewood Derby">
+                        <div class="activity-overlay"></div>
+                        <!-- <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"></path><circle cx="6.5" cy="16.5" r="2.5"></circle><circle cx="16.5" cy="16.5" r="2.5"></circle></svg></div> -->
+                    </div>
+                    <div class="activity-content">
+                        <h3>Pinewood Derby</h3>
+                        <p>Scouts build and race their own model cars! One of our most exciting annual events that the whole family enjoys.</p>
+                        <div class="activity-meta">
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>January</div>
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Veterans Memorial Building</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="images/activity-camping-2.jpg" alt="Family Campouts">
+                        <div class="activity-overlay"></div>
+                        <!-- <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 22h20L12 2z"></path><path d="M12 22v-6"></path></svg></div> -->
+                    </div>
+                    <div class="activity-content">
+                        <h3>Family Campouts</h3>
+                        <p>Typically at least one each in the spring & fall. Great for bonding, learning outdoor skills, and making memories!</p>
+                        <div class="activity-meta">
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Spring & Fall</div>
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Various Campgrounds</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="images/activity-hiking-2.jpg" alt="Pack Hikes">
+                        <div class="activity-overlay"></div>
+                        <!-- <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4 8 5-5 5 15H2L8 3z"></path></svg></div> -->
+                    </div>
+                    <div class="activity-content">
+                        <h3>Pack Hikes</h3>
+                        <p>Fall and spring hikes on local park trails. A great way to explore the outdoors, earn advancements, and burn off some energy together.</p>
+                        <div class="activity-meta">
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Spring & Fall</div>
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Local Park Trails</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="images/activity-pancake-breakfast.jpg" alt="Pancake Breakfast">
+                        <div class="activity-overlay"></div>
+                        <!-- <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg></div> -->
+                    </div>
+                    <div class="activity-content">
+                        <h3>Pancake Breakfast</h3>
+                        <p>Our annual fundraiser held in the Veterans Memorial Building. Scouts sell tickets and help serve the community!</p>
+                        <div class="activity-meta">
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>February</div>
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Veterans Memorial Building</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="images/activity-egg-drop-3.jpg" alt="Annual Egg Drop">
+                        <div class="activity-overlay"></div>
+                        <!-- <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 18v-6"></path><path d="M12 8V6"></path></svg></div> -->
+                    </div>
+                    <div class="activity-content">
+                        <h3>Annual Egg Drop</h3>
+                        <p>Yes, it's exactly what it sounds like! A fun engineering challenge where scouts design contraptions to protect their eggs.</p>
+                        <div class="activity-meta">
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Spring</div>
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>TBD</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="images/activity-flag-3.jpg" alt="Veterans Day Flag Placement">
+                        <div class="activity-overlay"></div>
+                        <!-- <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg></div> -->
+                    </div>
+                    <div class="activity-content">
+                        <h3>Veterans Day Flag Placement</h3>
+                        <p>Each November, our scouts honor local veterans by placing flags on their graves — a meaningful community service tradition for the whole pack.</p>
+                        <div class="activity-meta">
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>November</div>
+                            <div class="activity-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Sunset View Cemetery</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more-activities">
+                <h3>More Pack Activities</h3>
+                <div class="activity-tags">
+                    <div class="activity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Scouting for Food</div>
+                    <div class="activity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>Community Service</div>
+                    <div class="activity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"></circle><circle cx="18.5" cy="17.5" r="3.5"></circle><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"></path></svg>Bike Rides</div>
+                    <div class="activity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"></path><path d="m5 6 14 12"></path><path d="m5 18 14-12"></path></svg>Water Park</div>
+                    <div class="activity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>Blue and Gold Banquet</div>
+                </div>
+            </div>
+            <div class="community-service">
+                <h4><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>Community Service</h4>
+                <p>Our scouts participate in various community service activities including: Scouting for Food, Earth Day cleanup, Storm drain stewardship, Beach Cleanup, and Flag Placement on holidays at Veterans' cemetery. Pack activities are communicated via email.</p>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#calendar" class="btn btn-primary btn-large">View Pack Calendar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Scouting -->
+    <section class="section why-scouting">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Building Skills for Life</span>
+                <h2 class="section-title">Why Scouting <span>Matters</span></h2>
+                <p class="section-subtitle">Cub Scouting is focused on fun and friendship, and along the way we nurture personal growth and social skills.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, var(--forest), var(--forest-light));"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                    <h3>Leadership Development</h3>
+                    <p>Scouts share in adventure and take turns leading other scouts, building confidence and communication skills.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, #059669, #10b981);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 22h20L12 2z"></path><path d="M12 22v-6"></path></svg></div>
+                    <h3>Outdoor Skills</h3>
+                    <p>Scouts learn how to safely enjoy and care for the outdoors through camping, hiking, and nature activities.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, #2563eb, #3b82f6);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+                    <h3>Participatory Citizenship</h3>
+                    <p>Civic awareness and patriotism with an emphasis on service to the community through volunteer projects.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, var(--campfire), var(--campfire-dark));"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5h11"></path><path d="M6.5 17.5h11"></path><path d="M6 20v-2a6 6 0 1 1 12 0v2"></path><path d="M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg></div>
+                    <h3>Personal Fitness</h3>
+                    <p>Healthy eating and an active lifestyle are encouraged through physical activities and sports.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, #7c3aed, #8b5cf6);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg></div>
+                    <h3>Character Building</h3>
+                    <p>We seek to develop good character, guided by the Scout Oath, Scout Law, and Scout Mission.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, #db2777, #ec4899);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg></div>
+                    <h3>Lifelong Friendship</h3>
+                    <p>Make lifelong friends and create memories that will last a lifetime through shared experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join teaser -->
+    <section class="section">
+        <div class="container">
+            <div class="join-teaser">
+                <span class="section-label">Registration Always Open</span>
+                <h2>Ready to Join Pack 3?</h2>
+                <p>Registration is ongoing throughout the year, and we welcome new and returning families anytime. Our step-by-step guide covers dues, uniforms, and adult training so you can get started with confidence.</p>
+                <div class="hero-buttons" style="justify-content: center;">
+                    <a href="#join" class="btn btn-primary btn-large">Join Pack 3</a>
+                    <a href="#faqs" class="btn btn-outline btn-large">Read Our FAQs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+                <p class="section-subtitle">Everything you need to know about joining and participating in Albany Pack 3.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-list">
+                    <div class="faq-item active">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <h3>Who Can Participate?</h3>
+                            <div class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Anyone in kindergarten through fifth grades! Starting in 2018, we welcomed girls to join the cub scouts. We will be establishing dens at the outset of the Scouting season based on the number of Scouts who sign up in each grade. Den sizes are 10 or fewer.
+
+Albany's Pack 3 has always prided itself on being an inclusive unit that represents the diversity of our community. We are strongly committed to creating a welcoming environment for all children who wish to join our Pack.
+
+We are proud to be designated as an Inclusive Unit by Scouts for Equality and our leaders wear the "Scouts for Equality" badge on their uniforms to signal our dedication to a Scouting movement rooted in equality and free of discrimination.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <h3>How Does Cub Scouts Work?</h3>
+                            <div class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Cub Scouts is a family program for all kids interested in having fun, learning life skills, building community, exploring the outdoors, becoming leaders and good citizens, and making friends.
+
+The basic structure of the group is a "pack" – which includes the whole group of Scouts, from kindergarten through fifth grades. Each grade has one or more "dens" that meet in smaller groups to work on adventures to earn their rank.
+
+Cub Scouts complete adventures as they work to achieve their rank for that year. The adventures are different for each rank, allowing Cub Scouts to learn new age-appropriate skills and explore new topics each year. At the end of the year, if a Scout has met all of the requirements for that year, he or she will receive the rank (i.e. a first grader would receive the "Tiger" rank).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <h3>What Are the Ranks?</h3>
+                            <div class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>• Kindergarten = Lion
+• First Grade = Tiger
+• Second Grade = Wolf
+• Third Grade = Bear
+• Fourth Grade = Webelos (We Be Loyal Scouts)
+• Fifth Grade = Arrow of Light (AOL)
+
+In their fifth grade year, scouts "bridge" to Boy Scouts. This involves visiting local troops and choosing one that the scout will participate in and contribute to during their further adventures in Scouting.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <h3>How Much Does Cub Scouts Cost?</h3>
+                            <div class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Pack dues are $120 per year and include food, badges, and activities for your scout all year. This goes directly to the Albany Pack to cover activities for scouts and supplies. 
+
+                                You must also register with the National organization which is about $230. This includes things like insurance and a magazine.
+                                
+                                Lion and Tiger Scouts also require a parent to register with Pack 3 as an adult leader for $15.
+
+The basic uniform consists of a shirt, hat, neckerchief, neckerchief slide, and the pack and council patches. This can add up to $100 or so. (Our pack re-uses shirts and gear so check with us before buying!) The hat, neckerchief and slide will change with the different grades, but the same blue shirt can be used from kindergarten through third grade. In fourth and fifth grades, Scouts switch to a tan-colored shirt.
+
+We want every family to be able to participate. If your family needs help with registration costs, please speak with our Cubmaster about financial assistance.
+</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <h3>What Is the Time Commitment?</h3>
+                            <div class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Pack meets once a month on a Thursday evening from 6:30 to 7:30. Dens meet once or twice monthly on a day selected by the den.
+
+Throughout the year, families can also participate in campouts, hikes, community service projects, and other Pack traditions. We typically hold at least two family campouts each year—one in the fall and one in the spring—with additional campouts offered when possible. Other favorite activities include:
+
+Other activities include:
+• Pinewood Derby (January)
+• Pancake Breakfast (February)
+• Bake sale (April)
+• Community service projects
+• Fall and spring hikes
+
+Pack 3 is a volunteer-run organization, and parent participation is an important part of making our program possible. We ask each family to contribute at least 16 volunteer hours per year. There are lots of ways to help—from assisting at events and campouts to taking on small behind-the-scenes jobs—and we work with families to find opportunities that fit their schedules and interests.
+
+Parents of Lion and Tiger Scouts are also required to complete Safeguarding Youth Training online, which takes approximately one hour.
+
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-contact">
+                    <p>Still have questions? Send us a message!</p>
+                    <a href="https://docs.google.com/a/albanycubscouts.org/forms/d/e/1FAIpQLSfxPHOYqI9R7ilFIaBDBQiry88zzTRD1cMc6Qc4IZDQA5xPcA/viewform" target="_blank" rel="noopener">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div><!-- /#home -->
+
+    <!-- ============================================================
+         Pseudo-page: JOIN  (shown when URL hash is #join)
+         ============================================================ -->
+    <div id="join" class="page">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Registration Always Open
+            </span>
+            <h1>Join Albany Pack 3</h1>
+            <p>Registration is ongoing throughout the year — we welcome new and returning families anytime. Follow the steps below to get started.</p>
+        </div>
+    </section>
+
+    <!-- Join -->
+    <section class="section join">
+        <div class="container">
+            <div class="join-steps">
+                <div class="join-step">
+                    <div class="join-step-number">1</div>
+                    <div class="join-step-body">
+                        <h3>Complete the Online Registration Form</h3>
+                        <p>Pack registration is ongoing and we welcome new and returning families throughout the year. Fill out the form to get your family started, and email <a href="mailto:registration@albanycubscouts.org">registration@albanycubscouts.org</a> with any questions about the application process.</p>
+                        <a href="https://docs.google.com/forms/d/1qnf4T3nBY75Rcl-HnrNWSnxx47_SExupFjhFw-EIZNk/viewform?edit_requested=true" class="btn btn-primary" target="_blank" rel="noopener">Complete Registration Form</a>
+                    </div>
+                </div>
+                <div class="join-step">
+                    <div class="join-step-number">2</div>
+                    <div class="join-step-body">
+                        <h3>Register and Pay National BSA Dues</h3>
+                        <p>Register (or re-register) with the council and national BSA organization. You will be asked to pay the national fees. The National BSA fee is <strong>$230 per scout</strong>.</p>
+                        <a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-023paa0003" class="btn btn-primary" target="_blank" rel="noopener">Register with BSA</a>
+                    </div>
+                </div>
+                <div class="join-step">
+                    <div class="join-step-number">3</div>
+                    <div class="join-step-body">
+                        <h3>Pay Pack Dues</h3>
+                        <p>Pack dues are <strong>$120 per year</strong> and cover food, badges, and activities for your scout all year. Please pay via:</p>
+                        <ul>
+                            <li>Zelle to <a href="mailto:treasurer@albanycubscouts.org">treasurer@albanycubscouts.org</a></li>
+                            <li>Paper check made payable to "Albany Pack 3 Cub Scouts"</li>
+                        </ul>
+                        <p>Please <strong>clearly indicate the name of the scout</strong> you are paying for in the memo/details field. If your family needs help with registration costs, please speak with our Cubmaster about financial assistance.</p>
+                    </div>
+                </div>
+                <div class="join-step">
+                    <div class="join-step-number">4</div>
+                    <div class="join-step-body">
+                        <h3>Purchase a Uniform</h3>
+                        <p>The basic uniform consists of a shirt, hat, neckerchief, neckerchief slide, and the pack and council patches — this can add up to $100 or so. Albany Pack 3 works hard to re-use old uniforms, so check with us before buying! We plan to do a bulk uniform buy each year; more information will be sent out.</p>
+                        <p>You can also order online or visit a Scout store (in Pleasant Hill or San Rafael). Be sure to tell them you are with <strong>Albany Pack 003</strong>, part of the Golden Gate District, and what rank your scout is. The same blue shirt works for Kindergarten through 3rd grade; 4th and 5th graders wear a <strong>tan</strong> shirt. While there, pick up the handbook for your scout's grade. Shop online at <a href="http://www.scoutstuff.org/" target="_blank" rel="noopener">scoutstuff.org</a>, and see the <a href="http://www.scouting.org/filestore/pdf/CubScout_Insignia.pdf" target="_blank" rel="noopener">BSA Insignia Guide</a> for patch placement.</p>
+                    </div>
+                </div>
+                <div class="join-step">
+                    <div class="join-step-number">5</div>
+                    <div class="join-step-body">
+                        <h3>(Adults) Complete Youth Protection Training (YPT)</h3>
+                        <p>Youth Protection Training is <em>highly recommended</em> for all Pack 3 adults and <strong><em>REQUIRED</em></strong> for all parents/guardians of Kindergarten (Lions) and 1st graders (Tigers), and for any adult volunteering to help lead activities with kids.</p>
+                        <p><strong>NOTE:</strong> Everyone who is required to take YPT must do it <em>EVERY</em> year, even if your certificate says it is good for two years. Please send your completed certificate by OCTOBER 15 to <a href="mailto:registration@albanycubscouts.org">registration@albanycubscouts.org</a>.</p>
+                        <a href="https://www.scouting.org/training/youth-protection/" class="btn btn-primary" target="_blank" rel="noopener">Start Youth Protection Training</a>
+                    </div>
+                </div>
+                <div class="join-step">
+                    <div class="join-step-number">6</div>
+                    <div class="join-step-body">
+                        <h3>(Adults) Livescan and Mandatory Reporter Training</h3>
+                        <p>The Cubmaster will communicate with you if this is required. Please email <a href="mailto:registration@albanycubscouts.org">registration@albanycubscouts.org</a> when you have completed this requirement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="join-contact">
+                <h3>Questions about joining?</h3>
+                <p>Our registration team is happy to help. Please complete your registration by October 15.</p>
+                <p><a href="mailto:registration@albanycubscouts.org">registration@albanycubscouts.org</a></p>
+            </div>
+        </div>
+    </section>
+
+    </div><!-- /#join -->
+
+    <!-- ============================================================
+         Pseudo-page: CALENDAR  (shown when URL hash is #calendar)
+         ============================================================ -->
+    <div id="calendar" class="page">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Pack Calendar</h1>
+            <p>Stay up to date with pack meetings, den meetings, campouts, and everything else happening in Pack 3.</p>
+        </div>
+    </section>
+
+    <!-- Calendar -->
+    <section class="section calendar">
+        <div class="container">
+            <div class="embed-card">
+                <div class="embed-header">
+                    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Pack 3 Calendar</h3>
+                    <a href="https://calendar.google.com/calendar/embed?src=c03aee33d8f02d3f29f0be5598de80a253718076a086472e3c81ab2e5eb90e3a%40group.calendar.google.com&ctz=America%2FLos_Angeles" class="btn btn-primary" target="_blank" rel="noopener">Open Full Calendar</a>
+                </div>
+                <div class="embed-body">
+                    <iframe class="embed-calendar" src="https://calendar.google.com/calendar/embed?src=c03aee33d8f02d3f29f0be5598de80a253718076a086472e3c81ab2e5eb90e3a%40group.calendar.google.com&amp;ctz=America%2FLos_Angeles" title="Pack 3 Google Calendar" loading="lazy" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+<!-- 
+            <div class="embed-card">
+                <div class="embed-header">
+                    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>Detailed Calendar Document</h3>
+                    <a href="https://docs.google.com/document/d/1E7gZ8KHfPwqMoqphE6z6w38jK4-b7J0znBbJGM9ZdJU/edit?tab=t.0" class="btn btn-outline" style="border-color: var(--forest); color: var(--forest);" target="_blank" rel="noopener">Open in Google Docs</a>
+                </div>
+                <div class="embed-body">
+                    <iframe class="embed-doc" src="https://docs.google.com/document/d/e/2PACX-1vRjCnMh2be5hEoCmHE9xM_PH1dgtHiXv_BZpdzQMvfSuKeUAhfaHbbmJm85e98YyuyiH9XHmoSfl4QI/pub?embedded=true" title="Pack 3 detailed calendar document" loading="lazy" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <div class="calendar-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                <p><strong>Dates &amp; venues are subject to change.</strong> Current as of: August 21, 2025.</p>
+            </div> -->
+        </div>
+    </section>
+
+    </div><!-- /#calendar -->
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon"><img src="images/pack3-tent.png" alt="Pack 3 tent badge"></div>
+                        <div class="footer-brand-text">
+                            <h3>Pack 3</h3>
+                            <p>Albany, CA</p>
+                        </div>
+                    </div>
+                    <div class="footer-about">
+                        <p>Building character, citizenship, and personal fitness in young people through fun outdoor adventures and community service since 1935.</p>
+
+                        <!-- **The best circumstantial evidence points to 1936.** A 2013 snapshot of the old Google Sites page advertises the **"78th Annual Pancake Breakfast"** (March 17, 2013). Counting back: 2013 − 78 + 1 = **1936** for the first breakfast. If it were 1935, 2013 would be the 79th. (The breakfast _could_ post-date the pack's founding, but there's no record either way.)
+                         -->
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#organization">Organization</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#calendar">Calendar</a></li>
+                        <li><a href="#join">Join Pack 3</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.scouting.org" target="_blank">Scouting America <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></li>
+                        <li><a href="https://www.scouting.org/training/youth-protection/" target="_blank">Youth Protection Training <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></li>
+                        <li><a href="https://goldengatescouting.org/" target="_blank" rel="noopener">Golden Gate Council</a></li>
+                        <li><a href="#calendar">Pack Calendar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="https://docs.google.com/a/albanycubscouts.org/forms/d/e/1FAIpQLSfxPHOYqI9R7ilFIaBDBQiry88zzTRD1cMc6Qc4IZDQA5xPcA/viewform" target="_blank" rel="noopener">Contact Form</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>Veterans Memorial Hall<br>1325 Portland Avenue<br>Albany, CA 94706</span>
+                    </div>
+                    <div class="meeting-box">
+                        <p class="title">Pack Meetings</p>
+                        <p class="time">First Thursday of each month<br>6:30 PM - 7:30 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 Albany Cub Scout Pack 3. All rights reserved.</p>
+                    <p>Made with <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> in Albany, CA</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <script>
+        (function randomHeroImage() {
+            const bg = document.querySelector('.hero-bg');
+            if (!bg) return;
+            const images = ['images/hero-bg-1.jpg', 'images/hero-bg-2.jpg', 'images/hero-bg-3.jpg'];
+            const pick = images[Math.floor(Math.random() * images.length)];
+            bg.style.backgroundImage = "url('" + pick + "')";
+        })();
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+            document.querySelector('.overlay').classList.toggle('active');
+        }
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const wasActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            if (!wasActive) item.classList.add('active');
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        window.addEventListener('scroll', function() {
+            const btn = document.querySelector('.back-to-top');
+            if (window.scrollY > 500) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+
+        const CALENDAR_API_KEY = 'AIzaSyDiqDeS5APtob3g0QOFcxZzCDmg-vqgXS0';
+        const CALENDAR_ID = 'c03aee33d8f02d3f29f0be5598de80a253718076a086472e3c81ab2e5eb90e3a@group.calendar.google.com';
+
+        (function loadNextEvent() {
+            const el = {
+                card: document.getElementById('event-card'),
+                title: document.getElementById('event-title'),
+                date: document.getElementById('event-date'),
+                time: document.getElementById('event-time'),
+                location: document.getElementById('event-location')
+            };
+            const key = CALENDAR_API_KEY.match(/^[A-Za-z0-9_-]{30,}$/) ? CALENDAR_API_KEY : null;
+            if (!el.card) return;
+            if (!key) { el.card.style.display = 'none'; return; }
+            const url = 'https://www.googleapis.com/calendar/v3/calendars/' + encodeURIComponent(CALENDAR_ID) +
+                '/events?key=' + encodeURIComponent(key) +
+                '&singleEvents=true&orderBy=startTime&maxResults=10' +
+                '&timeMin=' + encodeURIComponent(new Date().toISOString());
+
+            fetch(url)
+                .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+                .then(data => {
+                    const next = (data.items || []).find(e => e.status !== 'cancelled' && e.start);
+                    if (!next) { el.card.style.display = 'none'; return; }
+                    const start = new Date(next.start.dateTime || next.start.date + 'T00:00:00-07:00');
+                    const end = next.end ? new Date(next.end.dateTime || next.end.date + 'T00:00:00-07:00') : null;
+                    const allDay = !next.start.dateTime;
+                    const fmtDate = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles' }).format(start);
+                    const fmtTime = (d) => new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Los_Angeles' }).format(d);
+                    el.title.textContent = next.summary || 'Upcoming Event';
+                    el.date.querySelector('span').textContent = fmtDate;
+                    el.date.style.display = '';
+                    if (allDay) {
+                        el.time.style.display = 'none';
+                    } else {
+                        el.time.querySelector('span').textContent =
+                            end ? fmtTime(start) + ' - ' + fmtTime(end) : fmtTime(start);
+                        el.time.style.display = '';
+                    }
+                    if (next.location) {
+                        el.location.querySelector('span').textContent = next.location
+                            .split('\n')[0].trim();
+                        el.location.style.display = '';
+                    }
+                    el.card.classList.add('event-card-live');
+                    console.info('Next event loaded from Google Calendar');
+                })
+                .catch(err => {
+                    el.card.style.display = 'none';
+                    console.warn('Could not load upcoming event from Google Calendar:', err.message);
+                });
+        })();
+    </script>
+</body>
+</html>
