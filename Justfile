@@ -23,6 +23,10 @@ originals:
 images:
     @nix-shell -p {{img_tools}} --run 'scripts/optimize-images.sh'
 
+# Regenerate site/favicon.ico (multi-size) from the tent logo
+favicon:
+    @nix-shell -p imagemagick --run 'magick site/images/pack3-tent.png -background none -define icon:auto-resize=64,48,32,16 site/favicon.ico'
+
 # Total size of the images referenced by the live page
 size:
     @node -e 'const fs=require("fs");const seen=new Set();for(const src of ["site/index.html","site/styles.css"])for(const m of fs.readFileSync(src,"utf8").matchAll(/images\/[A-Za-z0-9._-]+/g))seen.add(m[0].replace("images/",""));let t=0;for(const f of seen)t+=fs.statSync("site/images/"+f).size;console.log(seen.size+" images, "+(t/1024/1024).toFixed(2)+" MB referenced by the live page")'
