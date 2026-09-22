@@ -57,7 +57,7 @@
         .mobile-menu { display: none; position: fixed; top: 0; right: 0; width: 300px; height: 100vh; background: var(--forest-dark); padding: 90px 24px 24px; z-index: 999; box-shadow: -5px 0 30px rgba(0,0,0,0.3); }
         .mobile-menu.active { display: block; }
         .mobile-menu a { display: block; color: rgba(255,255,255,0.9); font-size: 17px; font-weight: 600; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .mobile-menu .btn { margin-top: 24px; width: 100%; }
+        .mobile-menu .btn { display: flex; margin-top: 24px; width: 100%; padding: 14px 24px; border-bottom: none; }
         .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 998; }
         .overlay.active { display: block; }
 
